@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <title>React Thymeleaf</title>
+    <style>
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    <!--Sub Content-->
+    <div id="notification"></div>
+
+    <!--Main Content-->
+    <article class="message">
+        <div class="message-header">
+            <p>This is main content rendering by Thymeleaf</p>
+        </div>
+        <div class="message-body">
+            <p th:text="${message}"></p>
+        </div>
+    </article>
+</div>
+
+<script src="/dist/index.bundle.js" th:src="@{/dist/index.bundle.js}"></script>
+</body>
+</html>

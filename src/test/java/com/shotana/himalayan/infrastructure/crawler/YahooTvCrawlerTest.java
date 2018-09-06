@@ -27,9 +27,6 @@ public class YahooTvCrawlerTest {
     public void crawl() throws IOException {
         List<TvProgram> actual = target.crawl(new Keyword("情熱大陸")).asList();
         assertThat(actual.get(0).getTitle(), containsString("情熱大陸"));
-        assertThat(actual.get(0).getStartAt(),
-                is(LocalDateTime.of(2018, 9, 9, 23, 0)));
-        assertThat(actual.get(0).getEndAt(),
-                is(LocalDateTime.of(2018, 9, 9, 23, 30)));
+        assertThat(actual.get(0).getStation(), containsString("TBS"));
     }
 }
